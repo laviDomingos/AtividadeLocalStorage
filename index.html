@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--1:Salvando e recuperando os dados-->
+    <h1 id="mensagem"></h1>
+
+    <!--2:Lista de Tarefas-->
+    <div class="wrapper">
+        <div class="zone" id="startZone">
+        <h2>A fazer</h2>
+        <div class="draggable" id="item-1" draggable="true">Comprar comida</div>
+        <div class="draggable" id="item-2" draggable="true">Estudar Front-End</div>
+        <div class="draggable" id="item-3" draggable="true">Tomar banho</div>
+    </div>
+
+    <div class="zone" id="endZone">
+        <h2>Concluída</h2>
+    </div>
+
+    <!--3:Contador de Visitas-->
+    <p id="contador"></p>
+
+    <script src="/script.js"></script>
+</body>
+</html>
