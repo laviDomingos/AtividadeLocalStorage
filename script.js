@@ -79,7 +79,6 @@ draggables.forEach((draggable) => {
         console.log('[drop] - Elemento solto');
 });
 
-
 //Mapeando zonas 
 zones.forEach((zone) => {
     zone.addEventListener('dragenter', (event) => {
@@ -110,10 +109,39 @@ zones.forEach((zone) => {
 });
 
 //---------------------------------------------------------
-
 //Contador de visitas - 3
 
-function contarVisitas() {
+function atualizarContador() {
     let visitas = localStorage.getItem('contadorVisitas');
-    
+
+    if(visitas == null) {
+        visitas = 1;
+        console.log(`Contador não funcionando.`)
+    } else {
+        visitas = parseInt(visitas, 10) + 1; 
+        console.log(`Contador funcionando.`);
+    }
+
+    //Armazenando no localstorage as visitas
+    localStorage.setItem('contadorVisitas', visitas);
+
+    document.getElementById('contador').textContent = `Você visitou esta página ${visitas} ${visitas > 1 ? 'vezes' : 'vez'}.`;
 }
+
+atualizarContador();
+
+//---------------------------------------------------------
+//Escolha de tema - 4
+
+function alterarTema(tema) {
+    document.body.className = tema;
+    localStorage.setItem("tema", tema);
+}
+
+const temaSalvo = localStorage.getItem("tema");
+    if(temaSalvo) {
+        document.body.className = temaSalvo;
+    }
+
+document.querySelector("#claro").addEventListener("click", () => alterarTema("claro"));
+document.querySelector("#escuro").addEventListener("click", () => alterarTema("escuro"));
