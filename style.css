@@ -1,91 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #eef1f5;
-    padding: 40px;
-    margin: 0;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: rgb(221, 44, 44);
-  }
-  
-  .wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 40px;
-  }
-  
-  .zone {
-    flex: 1;
-    min-width: 250px;
-    min-height: 300px;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 2px dashed #ccc;
-    border-radius: 12px;
-    transition: background-color 0.3s, border-color 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-  }  
-  
-  .zone.over {
-    background-color: #d1e7dd;
-    border-color: #28a745;
-  }
-  
-  .zone h2 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  .draggable {
-    padding: 15px 25px;
-    background-color: #4c8baf;
-    color: white;
-    font-weight: bold;
-    cursor: move;
-    border-radius: 8px;
-    user-select: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .draggable.dragging {
-    opacity: 0.6;
-    transform: scale(1.05);
-    background-color: #28642a;
-  }
+  font-family: "Quicksand", sans-serif;
+  background-color: #eef1f5;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.5s, color 0.5s;
+}
 
-  .contadorVisitas {
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #426cb4;
+  margin-top: 5rem;
+  font-size: 3rem;
+}
 
-  body.claro {
-    background-color: #ffffff;
-    color: #333;
-  }
+.wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 40px;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-bottom: 40px; 
+  flex-direction: column;
+} 
 
-  body.escuro {
-    background-color: #333;
-    color: #333;
-  }
+.zone {
+  flex: 1;
+  min-width: 250px;
+  min-height: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
 
-  .botoes {
-    display: flex;
+.zone.over {
+  background-color: #9bc2d1;
+  border-color: #6c88a3;
+}
 
-  }
+.zone h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.draggable {
+  padding: 15px 25px;
+  background-color: #4a89ad;  
+  color: white;
+  font-weight: bold;
+  cursor: move;
+  border-radius: 8px;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.draggable.dragging {
+  opacity: 0.6;
+  transform: scale(1.05);
+  background-color: #6c88a3;
+}
+
+.contadorVisitas {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0;
+  font-size: 2rem;
+}
+
+body.claro {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.escuro {
+  background-color: #333;
+  color: #333;
+}
+
+.botoes button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #4a89ad;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 1rem;
+  transition: background-color 0.3s;
+}
+
+.botoes button:hover {
+  background-color: #446991;
+  transform: scale(1.1); 
+}
