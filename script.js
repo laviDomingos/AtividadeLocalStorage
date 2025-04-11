@@ -16,7 +16,7 @@ localStorage.setItem("nomeUsuario", usuario.nome);
 
 let nome = localStorage.getItem("nomeUsuario");
     if(nome) {
-        document.getElementById("mensagem").innerText = `Bem-vindo de volta, ${dadosUsuario.nome}!`;
+        document.getElementById("mensagem").innerText = `Bem-vinda de volta, ${dadosUsuario.nome}!`;
     } else {
     document.body.innerHTML = "<h1>Não foi possível encontrar o nome.</h1>";
     }
